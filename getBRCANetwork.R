@@ -1,8 +1,6 @@
-library(TCGAbiolinks)
 library(dplyr)
 library(tidyverse)
 library(readxl)
-library(biomaRt)
 library(AnnotationDbi)
 library(org.Hs.eg.db)
 
@@ -82,13 +80,13 @@ cutoff <- quantile(vals,corrCutoff)
 edges <- filter(corrDF,correlations<cutoff)$'edges'
 edges.wNames <- filter(corrDF.wNames,correlations<cutoff)$'edges.wNames'
 
-realEdges2 <- c()
+realEdges <- c()
 realEdges.wNames <- c()
 for(i in 1:length(edges)){
   e <- edges[i]
   e.name <- edges.wNames[i]
   if(e %in% possibleEdges){
-    realEdges2 <- c(realEdges2,e)
+    realEdges <- c(realEdges,e)
     realEdges.wNames <- c(realEdges.wNames,e.name)
   }
 }

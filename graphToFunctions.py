@@ -25,15 +25,13 @@ random.shuffle(colors2)
 colors += colors2
 
 
-
-
 rSource = ro.r('''
                source('analyzeModuleFunctions.R')
                ''')
 r_getImportantPaths = ro.globalenv["getImportantPaths"]
 
 def getModules(cancerType):
-    G = nx.read_edgelist(cancerType+"_EdgeList2.txt")
+    G = nx.read_edgelist(cancerType+"_EdgeList.txt")
     LCC = sorted(list(nx.connected_components(G)),key=len,reverse=True)[0]
     G = nx.subgraph(G, LCC)
     mRNAs = []

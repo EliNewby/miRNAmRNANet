@@ -15,6 +15,7 @@ library(fgsea)
 library(AnnotationDbi)
 library(org.Hs.eg.db)
 library(biomaRt)
+setwd("~/Research/CleClinic/miRNAmRNANets/Code")
 
 getImportantPaths <- function(can){
   mart <- useMart(biomart = "ensembl", dataset = "hsapiens_gene_ensembl")
