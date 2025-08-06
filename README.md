@@ -18,7 +18,14 @@ This code was written and compiled on:<br>
 
 To run the code, the following files are also needed:
 - List of experimentally validated interactions from miRTarBase
-
+  - Provided as mirRTarBaseEdges.txt
+- Normalized miRNA and mRNA expression from TCGA
+  - Available through NIH Genomic Data Commons TCGA Pan-Cancer Atlas (Hoadley, K. A. et al. (2018) https://gdc.cancer.gov/about-data/publications/PanCan-CellOfOrigin)
+- GMT files of pathways of interest
+  - KEGG hsa Pathways
+  - Biocarta Pathways
+  - DAVID Bioinformatics Functional Annotation Pathways
+  - mSigDB Pathways 
 
 ## Network Construction Pipeline
 
