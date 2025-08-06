@@ -131,15 +131,7 @@ def getModuleFunctions(cancerType):
         resDF.to_excel(writer,sheet_name="Module #"+str(moduleNum))
     writer.close()
     
-#cancerType = "BRCACommunity2"
-#getModules(cancerType)
-#r_getImportantPaths(cancerType)
-#getModuleFunctions(cancerType)
-
-
-for moduleNum in [14,15,16,5,8]:
-    print(moduleNum)
-    cancerType="BRCACommunity"+str(moduleNum)
-    getModules(cancerType)
-    r_getImportantPaths(cancerType)
-    getModuleFunctions(cancerType)
+cancerType = "BRCA"
+getModules(cancerType)
+r_getImportantPaths(cancerType)
+getModuleFunctions(cancerType)
