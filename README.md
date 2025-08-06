@@ -1,5 +1,18 @@
 # Construction and Analysis of bipartite miRNA-mRNA network
-## Prerequisites
+Python and R code for the creation and community-based analysis of bipartite miRNA-mRNA networks. 
+
+Please cite
+>TBA
+  
+## Network Construction Pipeline
+The getBRCANetwork.R file contstructs a bipartite miRNA-mRNA network based on mRNA and miRNA data from breast cancer patient data. It takes as input the miRNA and mRNA expression data as well as a list of experimentally verified interactions from miRTarBase, and constructs a bipartite network based on highly negativley correlated miRNA and mRNAs. It outputs the network as an edgelist. The output edgelist files for breast cancer (BRCA) as well as 29 other cancer types are available through the NetworkEdgelists folder.
+
+## Network Community Analysis Pipeline
+The graphToFunctions.py file runs an analysis pipeline to determine functional annotations of a network. It takes as input an edgelist and analyzes the communities within this network for significant functional annotations. It outputs a file that lists the identified communities within the bipartit network, the functional annotations identified for each community, and a summary file that clusters signficant annotations to determine overall functions withing each community of the network. 
+
+The validateCommunities.py file runs a qstest (https://github.com/skojaku/qstest) on the generated network and identified community to determine which communities are statitically significant.
+
+## Requirements
 This code was written and compiled on:<br>
 - Python 3.12.3
   -  https://github.com/genisott/pycondor
@@ -26,7 +39,3 @@ To run the code, the following files are also needed:
   - Biocarta Pathways
   - DAVID Bioinformatics Functional Annotation Pathways
   - mSigDB Pathways 
-
-## Network Construction Pipeline
-
-## Network Community Analysis Pipeline
